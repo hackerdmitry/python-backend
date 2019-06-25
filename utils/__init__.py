@@ -12,5 +12,5 @@ cars = {
     Car('sx4', 180, 0.33, 44)
 }
 weather = Weather(20)
-Competition(cars, weather).start(10000)
+Competition(cars, weather).start(distance=10000)
 exit()

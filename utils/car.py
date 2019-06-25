@@ -1,4 +1,4 @@
-class Car:
+class Car(object):
     model = ''
     max_speed = 0
     drag_coef = 0.

@@ -1,4 +1,4 @@
-class Weather:
+class Weather(object):
     wind_speed = 0
 
     def __init__(self, wind_speed):

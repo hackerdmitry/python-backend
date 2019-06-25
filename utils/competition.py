@@ -1,10 +1,17 @@
 from random import randint
 
 
-class Competition:
+class Competition(object):
+    _created = 0
+
     def __init__(self, competitors, weather):
         self.competitors = competitors
         self.weather = weather
+
+    def __new__(cls, *args, **kwargs):
+        Competition._created += 1
+        if Competition._created < 2:
+            return super(Competition, cls).__new__(cls)
 
     def start(self, distance):
         for competitor in self.competitors:
